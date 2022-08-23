@@ -90,14 +90,14 @@ function calcular(){
 
     //soma os valores inseridos
     let totalInserido = horas * 60 + minutos;
+    //horas já inseridas
+    let displayAtual = Number(horas_atuais.textContent)*60 + Number(minutos_atuais.textContent);
     //somas as horas inseridas as horas já registradas
     let minutosTotais = totalInserido + Number(horas_atuais.textContent)*60 + Number(minutos_atuais.textContent);
 
     //chega se o usuário alcançou suas horas
-    if(minutosTotais > 40*60) {
+    if(totalInserido + displayAtual > 40*60) {
         alert('Você inseriu ' + Math.round( (minutosTotais - 40*60)/60 )   + 'h a mais');
-        updateDisplay(2400);
-        updateHistorico();
     } else {
         //transforma a quantidade total de minutos em h e min para visualização
         updateDisplay(minutosTotais);
