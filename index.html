@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora Docente</title>
+</head>
+<body>
+    
+    <div class="wraper">
+
+        <h1>Calculadora Docente</h1>
+        <h2>Horas atuais: <span id="horas_atuais">0</span>h  <span id="minutos_atuais">0</span>min </h2>
+
+        <p>Acima estão exibidas as atuais que você possui, abaixo insira os valores que você deseja somar à suas horas</p>
+        <p>A calculadora tem limite de 40 horas, após isso você já terá alcançado seu objetivo</p>
+        
+        <form id="form">
+            <div class="form-content">
+
+                <label for="">Horas:</label>
+                <input type="number" name="horas" min="0" value="0" id="horas_inseridas">
+                
+                <label for="">Minutos:</label>
+                <input type="number" name="minutos" min="0" max="60" value="0" id="minutos_inseridos">
+                                
+                <button onclick='calcular()'>Inserir horas</button>
+            </div>
+        </form>
+        
+        <progress id="progress-bar" value="0" max="100"> </progress>
+
+        <div class="historico-container">
+            <div class="historico-header">
+                <h3>Histórico</h3>
+            </div>
+            <table id="historico">
+
+            </table>
+        </div>
+
+        <button onclick='reiniciar()'>Reiniciar</button>
+
+        <footer>
+            <p>Design Web  | 402 INFO — Helena, Emanuel & David</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

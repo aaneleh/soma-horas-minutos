@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&family=Source+Sans+Pro:wght@300;400;600&display=swap');
+
+:root {
+    --bg: rgb(254, 254, 254);
+    --bg-body: rgb(230, 230, 230);
+    --text: rgb(0, 0, 0);
+    --shw: rgb(100, 100, 100);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-body);
+}
+h1, h2, h3{
+    font-family: 'Poppins', sans-serif;
+}
+p, label, input, button, tr {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+}
+
+button {
+    background-color: var(--bg);
+    padding: 0.5em 0.25em;
+    font-size: 1rem;
+}
+form {
+    border: 1px solid var(--text);
+}
+.form-content {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.wraper {
+    /* tamanho */
+    margin: 0 auto;
+    height: calc(100vh - 2em);
+    width: auto;
+    padding: 1em;
+    background-color: var(--bg);
+    /* posicao */
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#progress-bar {
+    background-color: var(--bg);
+    border: 1px solid var(--text);
+    border-radius: 7px;
+    width: 70%;
+}
+#progress-bar::-webkit-progress-bar {
+    background-color: var(--bg);
+    border-radius: 7px;
+}
+#progress-bar::-webkit-progress-value {
+    background-color: rgb(105, 207, 16);
+    border-radius: 7px;
+}
+
+
+@media screen and (min-width: 887px) {
+    body{
+        display: flex;
+        align-items: center;
+    }
+    .wraper {
+        padding: 2em;
+        width: min(50em, 100%);
+        height: auto;
+        border-radius: 1em;
+        box-shadow: 1px 1px 5px var(--shw);
+    }
+}
+
+.historico-container{
+    width: 70%;
+    border: 1px solid var(--text);
+}
+#historico {
+    width: 100%;
+}
+#historico tr{
+    line-height: 1.75em;
+}
+#historico tr:nth-child(1){
+    font-weight: bold;
+    text-decoration: underline;
+}
